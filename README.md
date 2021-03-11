@@ -68,16 +68,17 @@ Spring Cloud uses Maven for most build-related activities, and you should be abl
 These artifacts are available from Maven Central and Spring Release repository via BOM:
 
 	<dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>2.2.5.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+	    <dependencies>
+	        <dependency>
+	            <groupId>com.alibaba.cloud</groupId>
+	            <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+	            <version>2.2.5.RELEASE</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	    </dependencies>
+	</dependencyManagement>
 
 add the module in  `dependencies`.
 
@@ -141,3 +142,4 @@ If no-one else is using your branch, please rebase it against the current master
 
 When writing a commit message please follow these conventions, if you are fixing an existing issue please add Fixes gh-XXXX at the end of the commit message (where XXXX is the issue number).
 
+1111
