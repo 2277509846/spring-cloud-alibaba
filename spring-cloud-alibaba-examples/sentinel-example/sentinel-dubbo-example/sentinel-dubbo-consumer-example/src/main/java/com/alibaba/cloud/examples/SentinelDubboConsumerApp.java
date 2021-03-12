@@ -23,7 +23,10 @@ import com.alibaba.csp.sentinel.slots.block.SentinelRpcException;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 
+<<<<<<< HEAD
 import org.springframework.boot.WebApplicationType;
+=======
+>>>>>>> 1.x
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
@@ -52,7 +55,11 @@ public class SentinelDubboConsumerApp {
 
 		SpringApplicationBuilder consumerBuilder = new SpringApplicationBuilder();
 		ApplicationContext applicationContext = consumerBuilder
+<<<<<<< HEAD
 				.web(WebApplicationType.NONE).sources(SentinelDubboConsumerApp.class)
+=======
+				.web(false).sources(SentinelDubboConsumerApp.class)
+>>>>>>> 1.x
 				.run(args);
 
 		FooServiceConsumer service = applicationContext.getBean(FooServiceConsumer.class);

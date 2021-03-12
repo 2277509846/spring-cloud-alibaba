@@ -5,16 +5,25 @@
     <parent>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-examples</artifactId>
+<<<<<<< HEAD
         <version>${revision}</version>
+=======
+        <version>1.5.1.RELEASE</version>
+>>>>>>> 1.x
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
 
     <artifactId>sentinel-zuul-example</artifactId>
+<<<<<<< HEAD
     <name>Spring Cloud Starter Alibaba Sentinel x Zuul Example</name>
     <description>Example demonstrating how to use sentinel with zuul</description>
     <packaging>jar</packaging>
+=======
+    <packaging>jar</packaging>
+    <description>Example demonstrating how to use sentinel with zuul</description>
+>>>>>>> 1.x
 
 
     <dependencies>
@@ -61,6 +70,10 @@
         <!--<groupId>com.fasterxml.jackson.dataformat</groupId>-->
         <!--<artifactId>jackson-dataformat-xml</artifactId>-->
         <!--</dependency>-->
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1.x
     </dependencies>
 
     <build>

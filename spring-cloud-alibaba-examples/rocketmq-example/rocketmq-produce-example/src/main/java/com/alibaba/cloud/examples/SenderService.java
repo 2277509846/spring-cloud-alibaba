@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -20,6 +21,15 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.alibaba.cloud.examples.RocketMQProduceApplication.MySource;
+=======
+package com.alibaba.cloud.examples;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.alibaba.cloud.examples.RocketMQProduceApplication.MySource;
+
+>>>>>>> 1.x
 import org.apache.rocketmq.common.message.MessageConst;
 import org.apache.rocketmq.spring.support.RocketMQHeaders;
 
@@ -44,15 +54,25 @@ public class SenderService {
 	}
 
 	public <T> void sendWithTags(T msg, String tag) throws Exception {
+<<<<<<< HEAD
 		Message message = MessageBuilder.createMessage(msg,
 				new MessageHeaders(Stream.of(tag).collect(Collectors
 						.toMap(str -> MessageConst.PROPERTY_TAGS, String::toString))));
+=======
+		Map<String, Object> map = new HashMap<>();
+		map.put(MessageConst.PROPERTY_TAGS, tag);
+		Message message = MessageBuilder.createMessage(msg, new MessageHeaders(map));
+>>>>>>> 1.x
 		source.output1().send(message);
 	}
 
 	public <T> void sendObject(T msg, String tag) throws Exception {
 		Message message = MessageBuilder.withPayload(msg)
 				.setHeader(MessageConst.PROPERTY_TAGS, tag)
+<<<<<<< HEAD
+=======
+				.setHeader("foo", new Foo(1, "bar"))
+>>>>>>> 1.x
 				.setHeader(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON)
 				.build();
 		source.output1().send(message);

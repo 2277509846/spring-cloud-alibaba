@@ -115,7 +115,11 @@ messageChannel.send(MessageBuilder.withPayload("simple msg").build());
 **Spring Cloud Stream 底层基于这段代码去做了各种抽象。**
 
 
+<<<<<<< HEAD
 === 如何使用 Spring Cloud Alibaba RocketMQ Binder ###
+=======
+### 如何使用 Spring Cloud Alibaba RocketMQ Binder ###
+>>>>>>> 1.x
 
 如果要在您的项目中引入 RocketMQ Binder，需要引入如下 maven 依赖：
 
@@ -171,6 +175,7 @@ Message message = builder.build();
 output().send(message);
 ```
 
+<<<<<<< HEAD
 === MessageSource 支持
 
 SCS RocketMQ Binder 支持 `MessageSource`，可以进行消息的拉取，例子如下：
@@ -225,6 +230,8 @@ public class MQApplication {
 
 
 
+=======
+>>>>>>> 1.x
 === 配置选项
 
 ==== RocketMQ Binder Properties

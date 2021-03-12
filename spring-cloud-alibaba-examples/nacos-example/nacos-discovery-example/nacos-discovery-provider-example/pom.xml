@@ -5,15 +5,24 @@
     <parent>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>nacos-discovery-example</artifactId>
+<<<<<<< HEAD
         <version>${revision}</version>
+=======
+        <version>1.5.1.RELEASE</version>
+>>>>>>> 1.x
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
 
     <artifactId>nacos-discovery-provider-example</artifactId>
+<<<<<<< HEAD
     <name>Spring Cloud Starter Alibaba Nacos Discovery Provider Example</name>
     <description>Example demonstrating how to use nacos discovery</description>
     <packaging>jar</packaging>
+=======
+    <packaging>jar</packaging>
+    <description>Example demonstrating how to use nacos discovery</description>
+>>>>>>> 1.x
 
 
     <dependencies>

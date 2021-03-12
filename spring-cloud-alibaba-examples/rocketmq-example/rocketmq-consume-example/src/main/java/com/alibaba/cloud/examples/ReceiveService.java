@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -17,6 +18,12 @@
 package com.alibaba.cloud.examples;
 
 import org.springframework.cloud.stream.annotation.StreamListener;
+=======
+package com.alibaba.cloud.examples;
+
+import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.messaging.Message;
+>>>>>>> 1.x
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
 
@@ -26,10 +33,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class ReceiveService {
 
+<<<<<<< HEAD
 	@StreamListener("input1")
 	public void receiveInput1(String receiveMsg) {
 		System.out.println("input1 receive: " + receiveMsg);
 	}
+=======
+    @StreamListener("input1")
+    public void receiveInput1(Message message) {
+        System.out.println("input1 receive: " + message.getPayload() + ", foo header: " + message.getHeaders().get("foo"));
+    }
+>>>>>>> 1.x
 
 	@StreamListener("input2")
 	public void receiveInput2(String receiveMsg) {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -14,6 +15,8 @@
  * limitations under the License.
  */
 
+=======
+>>>>>>> 1.x
 package com.alibaba.cloud.examples;
 
 import java.util.List;
@@ -27,11 +30,17 @@ import com.alibaba.fastjson.TypeReference;
  * @author fangjian
  */
 public class JsonFlowRuleListConverter implements Converter<String, List<FlowRule>> {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 	@Override
 	public List<FlowRule> convert(String source) {
 		return JSON.parseObject(source, new TypeReference<List<FlowRule>>() {
 		});
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 }

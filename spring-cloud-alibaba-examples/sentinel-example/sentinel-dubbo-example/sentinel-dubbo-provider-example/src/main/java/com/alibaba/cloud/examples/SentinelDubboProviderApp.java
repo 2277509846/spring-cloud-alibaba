@@ -16,7 +16,10 @@
 
 package com.alibaba.cloud.examples;
 
+<<<<<<< HEAD
 import org.springframework.boot.WebApplicationType;
+=======
+>>>>>>> 1.x
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
@@ -28,8 +31,12 @@ public class SentinelDubboProviderApp {
 
 	public static void main(String[] args) {
 		SpringApplicationBuilder providerBuilder = new SpringApplicationBuilder();
+<<<<<<< HEAD
 		providerBuilder.web(WebApplicationType.NONE)
 				.sources(SentinelDubboProviderApp.class).run(args);
+=======
+		providerBuilder.web(false).sources(SentinelDubboProviderApp.class).run(args);
+>>>>>>> 1.x
 	}
 
 }

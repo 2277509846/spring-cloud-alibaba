@@ -3,15 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+<<<<<<< HEAD
         <artifactId>spring-cloud-alibaba-examples</artifactId>
         <groupId>com.alibaba.cloud</groupId>
         <version>${revision}</version>
+=======
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-examples</artifactId>
+        <version>1.5.1.RELEASE</version>
+>>>>>>> 1.x
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>business-service</artifactId>
+<<<<<<< HEAD
     <name>Spring Cloud Starter Alibaba Seata Example - Business Service</name>
     <packaging>jar</packaging>
+=======
+>>>>>>> 1.x
 
     <dependencies>
         <dependency>
@@ -19,22 +28,30 @@
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
         </dependency>
         <dependency>
+<<<<<<< HEAD
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
+=======
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+>>>>>>> 1.x
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
         <dependency>
+<<<<<<< HEAD
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
         <dependency>
+=======
+>>>>>>> 1.x
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>

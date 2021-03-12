@@ -5,20 +5,30 @@
     <parent>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-examples</artifactId>
+<<<<<<< HEAD
         <version>${revision}</version>
+=======
+        <version>1.5.1.RELEASE</version>
+>>>>>>> 1.x
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
 
     <artifactId>sentinel-core-example</artifactId>
+<<<<<<< HEAD
     <name>Spring Cloud Starter Alibaba Sentinel Core Example</name>
     <description>Example demonstrating how to use sentinel</description>
     <packaging>jar</packaging>
+=======
+    <packaging>jar</packaging>
+    <description>Example demonstrating how to use sentinel</description>
+>>>>>>> 1.x
 
 
     <dependencies>
         <dependency>
+<<<<<<< HEAD
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
@@ -26,10 +36,19 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-sentinel-datasource</artifactId>
+=======
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+>>>>>>> 1.x
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
@@ -56,12 +75,32 @@
         <!--<dependency>-->
         <!--<groupId>com.alibaba.csp</groupId>-->
         <!--<artifactId>sentinel-datasource-redis</artifactId>-->
+=======
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>com.alibaba.csp</groupId>-->
+        <!--<artifactId>sentinel-datasource-nacos</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.alibaba.csp</groupId>-->
+        <!--<artifactId>sentinel-datasource-zookeeper</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.alibaba.csp</groupId>-->
+        <!--<artifactId>sentinel-datasource-apollo</artifactId>-->
+>>>>>>> 1.x
         <!--</dependency>-->
         <!-- define in spring-boot-autoconfigure module -->
         <!--<dependency>-->
         <!--<groupId>com.fasterxml.jackson.dataformat</groupId>-->
         <!--<artifactId>jackson-dataformat-xml</artifactId>-->
         <!--</dependency>-->
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1.x
     </dependencies>
 
     <build>

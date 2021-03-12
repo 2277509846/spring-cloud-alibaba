@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -14,6 +15,8 @@
  * limitations under the License.
  */
 
+=======
+>>>>>>> 1.x
 package com.alibaba.cloud.examples;
 
 import com.alibaba.cloud.examples.ConsumerApplication.EchoService;
@@ -23,11 +26,20 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+<<<<<<< HEAD
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+=======
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+>>>>>>> 1.x
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
@@ -35,7 +47,11 @@ import org.springframework.web.client.RestTemplate;
  * @author xiaojing
  */
 @SpringBootApplication
+<<<<<<< HEAD
 @EnableDiscoveryClient(autoRegister = true)
+=======
+@EnableDiscoveryClient
+>>>>>>> 1.x
 @EnableFeignClients
 public class ConsumerApplication {
 
@@ -57,6 +73,7 @@ public class ConsumerApplication {
 		SpringApplication.run(ConsumerApplication.class, args);
 	}
 
+<<<<<<< HEAD
 	@FeignClient(name = "service-provider", fallback = EchoServiceFallback.class,
 			configuration = FeignConfiguration.class)
 	public interface EchoService {
@@ -74,21 +91,42 @@ public class ConsumerApplication {
 		@GetMapping("/notFound")
 		String notFound();
 
+=======
+	@FeignClient(name = "service-provider-1X", fallback = EchoServiceFallback.class, configuration = FeignConfiguration.class)
+	public interface EchoService {
+		@RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
+		String echo(@PathVariable("str") String str);
+
+		@RequestMapping(value = "/divide", method = RequestMethod.GET)
+		String divide(@RequestParam("a") Integer a, @RequestParam("b") Integer b);
+
+		@RequestMapping(value = "/notFound", method = RequestMethod.GET)
+		String notFound();
+>>>>>>> 1.x
 	}
 
 }
 
 class FeignConfiguration {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 	@Bean
 	public EchoServiceFallback echoServiceFallback() {
 		return new EchoServiceFallback();
 	}
+<<<<<<< HEAD
 
 }
 
 class EchoServiceFallback implements EchoService {
 
+=======
+}
+
+class EchoServiceFallback implements EchoService {
+>>>>>>> 1.x
 	@Override
 	public String echo(@PathVariable("str") String str) {
 		return "echo fallback";
@@ -103,5 +141,8 @@ class EchoServiceFallback implements EchoService {
 	public String notFound() {
 		return "notFound fallback";
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 }

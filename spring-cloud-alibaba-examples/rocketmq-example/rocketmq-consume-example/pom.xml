@@ -5,16 +5,25 @@
     <parent>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-examples</artifactId>
+<<<<<<< HEAD
         <version>${revision}</version>
+=======
+        <version>1.5.1.RELEASE</version>
+>>>>>>> 1.x
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
 
     <artifactId>rocketmq-consume-example</artifactId>
+<<<<<<< HEAD
     <name>Spring Cloud Starter Stream Alibaba RocketMQ Consume Example</name>
     <description>Example demonstrating how to use rocketmq consume</description>
     <packaging>jar</packaging>
+=======
+    <packaging>jar</packaging>
+    <description>Example demonstrating how to use rocketmq consume</description>
+>>>>>>> 1.x
 
 
     <dependencies>

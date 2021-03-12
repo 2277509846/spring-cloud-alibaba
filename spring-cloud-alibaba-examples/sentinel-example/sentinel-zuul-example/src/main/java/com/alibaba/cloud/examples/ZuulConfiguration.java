@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright 2013-2018 the original author or authors.
+=======
+ * Copyright (C) 2018 the original author or authors.
+>>>>>>> 1.x
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,10 +45,17 @@ public class ZuulConfiguration {
 
 			@Override
 			public BlockResponse fallbackResponse(String route, Throwable cause) {
+<<<<<<< HEAD
 				if ("my-service3".equals(route)) {
 					return new BlockResponse(433, "Sentinel Block3", route);
 				}
 				else if ("my-service4".equals(route)) {
+=======
+				if (route.equals("my-service3")) {
+					return new BlockResponse(433, "Sentinel Block3", route);
+				}
+				else if (route.equals("my-service4")) {
+>>>>>>> 1.x
 					return new BlockResponse(444, "my-service4", route);
 				}
 				else {

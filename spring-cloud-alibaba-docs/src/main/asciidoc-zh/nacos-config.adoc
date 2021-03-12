@@ -229,7 +229,11 @@ in develop-env enviroment; user name :nacos-config-yaml-update; age: 68
 spring.profiles.active=product
 ----
 
+<<<<<<< HEAD
 同时生产环境上 Nacos 需要添加对应 DataId 的基础配置。例如，在生产环境下的 Naocs 添加了DataId为：nacos-config-product.yaml的配置：
+=======
+同时生产环境上 Nacos 需要添加对应 DataId 的基础配置。例如，在生成环境下的 Naocs 添加了DataId为：nacos-config-product.yaml的配置：
+>>>>>>> 1.x
 
 [source,subs="normal"]
 ----
@@ -281,7 +285,11 @@ NOTE: 该配置必须放在 bootstrap.properties 文件中。并且在添加配�
 
 === 支持自定义扩展的 Data Id 配置
 
+<<<<<<< HEAD
 Nacos Config 从 0.2.1 版本后，可支持自定义 Data Id 的配置。关于这部分详细的设计可参考 https://github.com/spring-cloud-incubator/spring-cloud-alibaba/issues/141[这里]。
+=======
+Nacos Config 从 0.2.1 版本后，可支持自定义 Data Id 的配置。关于这部分详细的设计可参考 https://github.com/alibaba/spring-cloud-alibaba/issues/141[这里]。
+>>>>>>> 1.x
 一个完整的配置案例如下所示：
 
 [source,properties]
@@ -415,8 +423,13 @@ Endpoint 暴露的 json 中包含了三种属性:
 |===
 |配置项 |Key |默认值 |说明
 |服务端地址|`spring.cloud.nacos.config.server-addr`|| Nacos Server 启动监听的ip地址和端口
+<<<<<<< HEAD
 |配置对应的 DataId|`spring.cloud.nacos.config.name`|| 先取 prefix，再取 name，最后取 spring.application.name
 |配置对应的 DataId|`spring.cloud.nacos.config.prefix`|| 先取 prefix，再取 name，最后取 spring.application.name
+=======
+|配置对应的 DataId|`spring.cloud.nacos.config.name`|| 先取 prefix，再去 name，最后取 spring.application.name
+|配置对应的 DataId|`spring.cloud.nacos.config.prefix`|| 先取 prefix，再去 name，最后取 spring.application.name
+>>>>>>> 1.x
 |配置内容编码|`spring.cloud.nacos.config.encode`||读取的配置内容对应的编码
 |GROUP|`spring.cloud.nacos.config.group`|`DEFAULT_GROUP`|配置对应的组
 |文件扩展名|`spring.cloud.nacos.config.fileExtension`|`properties`|配置项对应的文件扩展名，目前支持 properties 和 yaml(yml)

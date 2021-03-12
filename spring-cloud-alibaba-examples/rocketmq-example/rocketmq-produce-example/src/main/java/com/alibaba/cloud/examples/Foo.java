@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -14,6 +15,8 @@
  * limitations under the License.
  */
 
+=======
+>>>>>>> 1.x
 package com.alibaba.cloud.examples;
 
 /**
@@ -22,7 +25,10 @@ package com.alibaba.cloud.examples;
 public class Foo {
 
 	private int id;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 	private String bar;
 
 	public Foo() {
@@ -53,5 +59,8 @@ public class Foo {
 	public String toString() {
 		return "Foo{" + "id=" + id + ", bar='" + bar + '\'' + '}';
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 }

@@ -10,7 +10,11 @@ Spring Cloud Alibaba BOM 包含了它所使用的所有依赖的版本。
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+<<<<<<< HEAD
             <version>2.2.4.RELEASE</version>
+=======
+            <version>1.5.1.RELEASE</version>
+>>>>>>> 1.x
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -20,4 +24,7 @@ Spring Cloud Alibaba BOM 包含了它所使用的所有依赖的版本。
 
 在下面的章节中，假设您使用的是 Spring Cloud Alibaba bom，相关 starter 依赖将不包含版本号。
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x

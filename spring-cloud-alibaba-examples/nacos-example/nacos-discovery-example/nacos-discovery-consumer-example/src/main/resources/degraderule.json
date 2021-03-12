@@ -1,24 +1,40 @@
 [
   {
+<<<<<<< HEAD
     "resource": "GET:http://service-provider/test",
+=======
+    "resource": "GET:http://service-provider-1X/test",
+>>>>>>> 1.x
     "count": 0.5,
     "grade": 1,
     "timeWindow": 30
   },
   {
+<<<<<<< HEAD
     "resource": "GET:http://service-provider",
+=======
+    "resource": "GET:http://service-provider-1X",
+>>>>>>> 1.x
     "count": 0.5,
     "grade": 1,
     "timeWindow": 10
   },
   {
+<<<<<<< HEAD
     "resource": "GET:http://service-provider/sleep",
+=======
+    "resource": "GET:http://service-provider-1X/sleep",
+>>>>>>> 1.x
     "count": 20.0,
     "grade": 0,
     "timeWindow": 30
   },
   {
+<<<<<<< HEAD
     "resource": "GET:http://service-provider/divide",
+=======
+    "resource": "GET:http://service-provider-1X/divide",
+>>>>>>> 1.x
     "count": 0.5,
     "grade": 1,
     "timeWindow": 30

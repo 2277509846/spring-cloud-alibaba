@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -14,19 +15,27 @@
  * limitations under the License.
  */
 
+=======
+>>>>>>> 1.x
 package com.alibaba.cloud.examples;
 
 import com.alibaba.cloud.examples.RocketMQConsumerApplication.MySink;
 
+<<<<<<< HEAD
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+=======
+>>>>>>> 1.x
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.Input;
+<<<<<<< HEAD
 import org.springframework.cloud.stream.binder.PollableMessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.ParameterizedTypeReference;
+=======
+>>>>>>> 1.x
 import org.springframework.messaging.SubscribableChannel;
 
 /**
@@ -36,6 +45,7 @@ import org.springframework.messaging.SubscribableChannel;
 @EnableBinding({ MySink.class })
 public class RocketMQConsumerApplication {
 
+<<<<<<< HEAD
 	public static void main(String[] args) {
 		SpringApplication.run(RocketMQConsumerApplication.class, args);
 	}
@@ -45,6 +55,8 @@ public class RocketMQConsumerApplication {
 		return new ConsumerCustomRunner();
 	}
 
+=======
+>>>>>>> 1.x
 	public interface MySink {
 
 		@Input("input1")
@@ -59,6 +71,7 @@ public class RocketMQConsumerApplication {
 		@Input("input4")
 		SubscribableChannel input4();
 
+<<<<<<< HEAD
 		@Input("input5")
 		PollableMessageSource input5();
 
@@ -85,6 +98,12 @@ public class RocketMQConsumerApplication {
 			}
 		}
 
+=======
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(RocketMQConsumerApplication.class, args);
+>>>>>>> 1.x
 	}
 
 }

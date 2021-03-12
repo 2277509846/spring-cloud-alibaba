@@ -170,6 +170,7 @@ Message message = builder.build();
 output().send(message);
 ```
 
+<<<<<<< HEAD
 === Support MessageSource
 
 SCS RocketMQ Binder support `MessageSource`，which can receive messages by pull mode：
@@ -222,6 +223,8 @@ public class MQApplication {
 }
 ```
 
+=======
+>>>>>>> 1.x
 === Configuration Options
 
 ==== RocketMQ Binder Properties

@@ -1,11 +1,19 @@
 /*
+<<<<<<< HEAD
  * Copyright 2013-2018 the original author or authors.
+=======
+ * Copyright (C) 2019 the original author or authors.
+>>>>>>> 1.x
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
+<<<<<<< HEAD
  *      https://www.apache.org/licenses/LICENSE-2.0
+=======
+ *      http://www.apache.org/licenses/LICENSE-2.0
+>>>>>>> 1.x
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +21,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 package com.alibaba.cloud.examples;
 
 import java.util.Random;
@@ -35,11 +46,17 @@ public class AccountController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(AccountController.class);
 
 	private static final String SUCCESS = "SUCCESS";
+<<<<<<< HEAD
 
 	private static final String FAIL = "FAIL";
 
 	private final JdbcTemplate jdbcTemplate;
 
+=======
+	private static final String FAIL = "FAIL";
+
+	private final JdbcTemplate jdbcTemplate;
+>>>>>>> 1.x
 	private Random random;
 
 	public AccountController(JdbcTemplate jdbcTemplate) {

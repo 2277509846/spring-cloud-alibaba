@@ -29,7 +29,11 @@ Before we start the demo, let's learn how to connect Nacos Config to a Spring Cl
 		public class ProviderApplication {
 
 			public static void main(String[] args) {
+<<<<<<< HEAD
 				SpringApplication.run(ProviderApplication.class, args);
+=======
+				SpringApplication.run(Application.class, args);
+>>>>>>> 1.x
 			}
 
 			@RestController
@@ -72,7 +76,11 @@ Before we start the demo, let's learn how to connect Nacos Config to a Spring Cl
 
 #### Query Service
 
+<<<<<<< HEAD
 Enter `http://127.0.0.1:8848/nacos/#/serviceDetail?name=service-provider&groupName=DEFAULT_GROUP` in the browser address bar and click Go to, we can see that the service node has been successfully registered to Nacos Server.
+=======
+Enter `http://127.0.0.1:8848/nacos/v1/ns/instances?serviceName=service-provider` in the browser address bar and click Go to, we can see that the service node has been successfully registered to Nacos Server.
+>>>>>>> 1.x
 
 ![查询服务](https://cdn.nlark.com/lark/0/2018/png/54319/1536986288092-5cf96af9-9a26-466b-85f6-39ad1d92dfdc.png)
 
@@ -105,7 +113,11 @@ The code of `nacos-discovery-consumer-example` project will be analyzed below, d
 
 	    @FeignClient(name = "service-provider")
 	    public interface EchoService {
+<<<<<<< HEAD
 	        @GetMapping(value = "/echo/{str}")
+=======
+	        @RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
+>>>>>>> 1.x
 	        String echo(@PathVariable("str") String str);
 	    }
 	    
@@ -123,11 +135,19 @@ The code of `nacos-discovery-consumer-example` project will be analyzed below, d
 		    @Autowired
 		    private EchoService echoService;
 		
+<<<<<<< HEAD
 		    @GetMapping(value = "/echo-rest/{str}")
 		    public String rest(@PathVariable String str) {
 		        return restTemplate.getForObject("http://service-provider/echo/" + str, String.class);
 		    }
 		    @GetMapping(value = "/echo-feign/{str}")
+=======
+		    @RequestMapping(value = "/echo-rest/{str}", method = RequestMethod.GET)
+		    public String rest(@PathVariable String str) {
+		        return restTemplate.getForObject("http://service-provider/echo/" + str, String.class);
+		    }
+		    @RequestMapping(value = "/echo-feign/{str}", method = RequestMethod.GET)
+>>>>>>> 1.x
 		    public String feign(@PathVariable String str) {
 		        return echoService.echo(str);
 		    }
@@ -158,7 +178,11 @@ The code of `nacos-discovery-consumer-example` project will be analyzed below, d
 
 Spring Cloud Nacos Discovery follows the spring cloud common standard and implements three interfaces: AutoServiceRegistration, ServiceRegistry, and Registration.
 
+<<<<<<< HEAD
 During the startup phase of the spring cloud application, the WebServerInitializedEvent event is watched. When the WebServerInitializedEvent event is received after the Web container is initialized, the registration action is triggered, and the ServiceRegistry register method is called to register the service to the Nacos Server.
+=======
+During the startup phase of the spring cloud application, the ServletWebServerInitializedEvent event is watched. When the ServletWebServerInitializedEvent event is received after the Web container is initialized, the registration action is triggered, and the ServiceRegistry register method is called to register the service to the Nacos Server.
+>>>>>>> 1.x
 
 
 
@@ -207,7 +231,10 @@ Metadata|spring.cloud.nacos.discovery.metadata||Extended data, Configure using M
 log name|spring.cloud.nacos.discovery.log-name||
 endpoint|spring.cloud.nacos.discovery.endpoint||The domain name of a service, through which the server address can be dynamically obtained.
 Integration Ribbon|ribbon.nacos.enabled|true|
+<<<<<<< HEAD
 enabled|spring.cloud.nacos.discovery.enabled|true|The switch to enable or disable nacos service discovery
+=======
+>>>>>>> 1.x
 
 
 

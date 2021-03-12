@@ -175,7 +175,11 @@ AccessKey|spring.cloud.nacos.config.access-key||
 SecretKey|spring.cloud.nacos.config.secret-key||
 相对路径|spring.cloud.nacos.config.context-path||服务端 API 的相对路径
 接入点|spring.cloud.nacos.config.endpoint|UTF-8|地域的某个服务的入口域名，通过此域名可以动态地拿到服务端地址
+<<<<<<< HEAD
 是否开启监听和自动刷新|spring.cloud.nacos.config.refresh-enabled|true|
+=======
+是否开启监听和自动刷新|spring.cloud.nacos.config.refresh.enabled|true|
+>>>>>>> 1.x
 
 
 

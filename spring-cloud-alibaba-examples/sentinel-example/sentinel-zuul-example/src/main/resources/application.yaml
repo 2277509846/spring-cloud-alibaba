@@ -13,8 +13,13 @@ spring:
         ruleType: gw-api-group
       transport:
         dashboard: localhost:8080
+<<<<<<< HEAD
       filter:
         enabled: false
+=======
+#      filter:
+#        enabled: true
+>>>>>>> 1.x
 
 management.endpoints.web.exposure.include: "*"
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -14,16 +15,25 @@
  * limitations under the License.
  */
 
+=======
+>>>>>>> 1.x
 package com.alibaba.cloud.examples;
 
 import java.io.IOException;
 import java.io.StringReader;
+<<<<<<< HEAD
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 
 import com.alibaba.cloud.nacos.NacosConfigManager;
+=======
+import java.util.Properties;
+import java.util.concurrent.Executor;
+
+import com.alibaba.cloud.nacos.NacosConfigProperties;
+>>>>>>> 1.x
 import com.alibaba.nacos.api.config.listener.Listener;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,12 +42,17 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+<<<<<<< HEAD
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
+=======
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.stereotype.Component;
+>>>>>>> 1.x
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -46,6 +61,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @SpringBootApplication
 public class Application {
+<<<<<<< HEAD
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -156,11 +172,17 @@ class UserConfig {
 
 	}
 
+=======
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+>>>>>>> 1.x
 }
 
 @Component
 class SampleRunner implements ApplicationRunner {
 
+<<<<<<< HEAD
 	@Autowired
 	private NacosConfigManager nacosConfigManager;
 
@@ -173,6 +195,34 @@ class SampleRunner implements ApplicationRunner {
 					 * Callback with latest config data.
 					 * @param configInfo latest config data for specific dataId in Nacos
 					 * server
+=======
+	@Value("${user.name}")
+	String userName;
+
+	@Value("${user.age:25}")
+	int userAge;
+
+	@Autowired
+	private NacosConfigProperties nacosConfigProperties;
+
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		System.out.println(
+				String.format("Initial username=%s, userAge=%d", userName, userAge));
+
+		nacosConfigProperties.configServiceInstance().addListener(
+				"nacos-config-example.properties", "DEFAULT_GROUP", new Listener() {
+
+					/**
+					 * Callback with latest config data.
+					 *
+					 * For example, config data in Nacos is:
+					 *
+					 * user.name=Nacos user.age=25
+					 *
+					 * @param configInfo latest config data for specific dataId in Nacos
+					 *     server
+>>>>>>> 1.x
 					 */
 					@Override
 					public void receiveConfigInfo(String configInfo) {
@@ -192,13 +242,17 @@ class SampleRunner implements ApplicationRunner {
 					}
 				});
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 }
 
 @RestController
 @RefreshScope
 class SampleController {
 
+<<<<<<< HEAD
 	@Autowired
 	UserConfig userConfig;
 
@@ -231,3 +285,16 @@ class SampleController {
 	}
 
 }
+=======
+	@Value("${user.name}")
+	String userName;
+
+	@Value("${user.age:25}")
+	int age;
+
+	@RequestMapping("/user")
+	public String simple() {
+		return "Hello Nacos Config!" + "Hello " + userName + " " + age + "!";
+	}
+}
+>>>>>>> 1.x

@@ -1,11 +1,19 @@
 /*
+<<<<<<< HEAD
  * Copyright 2013-2018 the original author or authors.
+=======
+ * Copyright (C) 2018 the original author or authors.
+>>>>>>> 1.x
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
+<<<<<<< HEAD
  *      https://www.apache.org/licenses/LICENSE-2.0
+=======
+ *      http://www.apache.org/licenses/LICENSE-2.0
+>>>>>>> 1.x
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,10 +33,15 @@ import org.springframework.messaging.Message;
 /**
  * @author <a href="mailto:fangjian0423@gmail.com">Jim</a>
  */
+<<<<<<< HEAD
 @RocketMQTransactionListener(txProducerGroup = "myTxProducerGroup", corePoolSize = 5,
 		maximumPoolSize = 10)
 public class TransactionListenerImpl implements RocketMQLocalTransactionListener {
 
+=======
+@RocketMQTransactionListener(txProducerGroup = "myTxProducerGroup", corePoolSize = 5, maximumPoolSize = 10)
+public class TransactionListenerImpl implements RocketMQLocalTransactionListener {
+>>>>>>> 1.x
 	@Override
 	public RocketMQLocalTransactionState executeLocalTransaction(Message msg,
 			Object arg) {
@@ -54,5 +67,8 @@ public class TransactionListenerImpl implements RocketMQLocalTransactionListener
 		System.out.println("check: " + new String((byte[]) msg.getPayload()));
 		return RocketMQLocalTransactionState.COMMIT;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -14,6 +15,8 @@
  * limitations under the License.
  */
 
+=======
+>>>>>>> 1.x
 package com.alibaba.cloud.examples;
 
 import com.alibaba.cloud.sentinel.rest.SentinelClientHttpResponse;
@@ -25,11 +28,15 @@ import org.springframework.http.client.ClientHttpRequestExecution;
 /**
  * @author fangjian
  */
+<<<<<<< HEAD
 public final class ExceptionUtil {
 
 	private ExceptionUtil() {
 
 	}
+=======
+public class ExceptionUtil {
+>>>>>>> 1.x
 
 	public static SentinelClientHttpResponse handleException(HttpRequest request,
 			byte[] body, ClientHttpRequestExecution execution, BlockException ex) {
@@ -37,4 +44,8 @@ public final class ExceptionUtil {
 		return new SentinelClientHttpResponse("custom block info");
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1.x

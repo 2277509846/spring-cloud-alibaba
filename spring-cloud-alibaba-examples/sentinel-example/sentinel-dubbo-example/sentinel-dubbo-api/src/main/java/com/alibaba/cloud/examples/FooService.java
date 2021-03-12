@@ -15,6 +15,10 @@
  */
 
 package com.alibaba.cloud.examples;
+<<<<<<< HEAD
+<<<<<<< HEAD:spring-cloud-alibaba-examples/sentinel-example/sentinel-dubbo-example/sentinel-dubbo-api/src/main/java/com/alibaba/cloud/examples/FooService.java
+=======
+>>>>>>> 1.x
 
 /**
  * @author fangjian
@@ -23,4 +27,21 @@ public interface FooService {
 
 	String hello(String name);
 
+<<<<<<< HEAD
+=======
+
+import org.springframework.stereotype.Service;
+
+/**
+ * @author xiaolongzuo
+ */
+@Service
+public class TestService {
+
+	public void test() {
+		TestController.atomicInteger.incrementAndGet();
+	}
+>>>>>>> 1.x:spring-cloud-alibaba-examples/schedulerx-example/schedulerx-simple-task-example/src/main/java/com/alibaba/cloud/examples/TestService.java
+=======
+>>>>>>> 1.x
 }

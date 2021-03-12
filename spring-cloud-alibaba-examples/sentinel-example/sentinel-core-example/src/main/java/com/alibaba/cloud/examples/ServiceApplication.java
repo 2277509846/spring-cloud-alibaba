@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2013-2018 the original author or authors.
  *
@@ -28,6 +29,15 @@ import com.alibaba.csp.sentinel.slots.block.degrade.DegradeRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.Customizer;
+=======
+package com.alibaba.cloud.examples;
+
+import com.alibaba.cloud.sentinel.annotation.SentinelRestTemplate;
+import com.alibaba.csp.sentinel.datasource.Converter;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+>>>>>>> 1.x
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -38,8 +48,12 @@ import org.springframework.web.client.RestTemplate;
 public class ServiceApplication {
 
 	@Bean
+<<<<<<< HEAD
 	@SentinelRestTemplate(blockHandler = "handleException",
 			blockHandlerClass = ExceptionUtil.class)
+=======
+	@SentinelRestTemplate(blockHandler = "handleException", blockHandlerClass = ExceptionUtil.class)
+>>>>>>> 1.x
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
@@ -54,6 +68,7 @@ public class ServiceApplication {
 		return new JsonFlowRuleListConverter();
 	}
 
+<<<<<<< HEAD
 	@Bean
 	public Customizer<SentinelCircuitBreakerFactory> defaultConfig() {
 		return factory -> {
@@ -66,6 +81,8 @@ public class ServiceApplication {
 		};
 	}
 
+=======
+>>>>>>> 1.x
 	public static void main(String[] args) {
 		SpringApplication.run(ServiceApplication.class, args);
 	}

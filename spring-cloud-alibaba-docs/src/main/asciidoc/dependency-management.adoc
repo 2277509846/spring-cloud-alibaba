@@ -8,7 +8,11 @@ If you’re a Maven Central user, add our BOM to your pom.xml <dependencyManagem
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+<<<<<<< HEAD
             <version>2.2.4.RELEASE</version>
+=======
+            <version>1.5.1.RELEASE</version>
+>>>>>>> 1.x
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -17,4 +21,7 @@ If you’re a Maven Central user, add our BOM to your pom.xml <dependencyManagem
 ```
 
 In the following sections, it will be assumed you are using the Spring Cloud Alibaba BOM and the dependency snippets will not contain versions.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x

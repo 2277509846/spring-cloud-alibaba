@@ -5,23 +5,43 @@
     <parent>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-examples</artifactId>
+<<<<<<< HEAD
         <version>${revision}</version>
+=======
+        <version>1.5.1.RELEASE</version>
+>>>>>>> 1.x
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
     <artifactId>nacos-discovery-example</artifactId>
     <name>Spring Cloud Starter Alibaba Nacos Discovery Examples</name>
     <description>Example demonstrating how to use nacos discovery</description>
     <packaging>pom</packaging>
+=======
+
+    <artifactId>nacos-discovery-example</artifactId>
+    <packaging>pom</packaging>
+    <description>Example demonstrating how to use nacos discovery</description>
+>>>>>>> 1.x
 
 
     <modules>
         <module>nacos-discovery-consumer-example</module>
+<<<<<<< HEAD
         <module>nacos-discovery-consumer-sclb-example</module>
         <module>nacos-reactivediscovery-consumer-example</module>
         <module>nacos-discovery-provider-example</module>
         <module>nacos-discovery-spring-cloud-config-server-example</module>
         <module>nacos-discovery-spring-cloud-config-client-example</module>
     </modules>
+=======
+        <module>nacos-discovery-provider-example</module>
+        <module>nacos-discovery-spring-cloud-config-server</module>
+        <module>nacos-discovery-spring-cloud-config-client</module>
+    </modules>
+
+
+>>>>>>> 1.x
 </project>

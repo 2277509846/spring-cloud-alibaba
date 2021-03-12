@@ -51,6 +51,7 @@ The @SentinelResource annotation is used to identify if a resource is rate limit
 
 @SentinelResource also provides attributes such as `blockHandler`, `blockHandlerClass`,  and `fallback` to identify rate limiting or degradation operations. For more details, refer to  https://github.com/alibaba/Sentinel/wiki/%E6%B3%A8%E8%A7%A3%E6%94%AF%E6%8C%81[Sentinel Annotation Support].
 
+<<<<<<< HEAD
 The above examples are all used in the WebServlet environment. Sentinel currently supports WebFlux and needs to cooperate with the `spring-boot-starter-webflux` dependency to trigger the WebFlux-related automation configuration in sentinel starter.
 
 ```java
@@ -76,6 +77,8 @@ public class TestController {
 }
 ```
 
+=======
+>>>>>>> 1.x
 ===== Sentinel Dashboard
 
 Sentinel dashboard is a lightweight console that provides functions such as machine discovery, single-server resource monitoring, overview of cluster resource data, as well as rule management. To use these features, you only need to complete a few steps.
@@ -107,10 +110,16 @@ java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject
 
 If there is conflict with the 8080 port, you can use `-Dserver.port=new port` to define a new port.
 
+<<<<<<< HEAD
 ==== Configure the Dashboard
 
 .application.yml
 [source,yaml]
+=======
+#### Configure the Dashboard
+
+.application.yml
+>>>>>>> 1.x
 ----
 spring:
   cloud:
@@ -278,6 +287,7 @@ If you want to use Sentinel Starter with Zuul, you need to add the `spring-cloud
 </dependency>
 ```
 
+<<<<<<< HEAD
 === Support Spring Cloud Gateway
 
 Refer https://github.com/alibaba/Sentinel/wiki/API-Gateway-Flow-Control[API Gateway Flow Control]
@@ -303,6 +313,8 @@ If you want to use Sentinel Starter with Spring Cloud Gateway, you need to add t
 
 include::circuitbreaker-sentinel.adoc[]
 
+=======
+>>>>>>> 1.x
 === Sentinel Endpoint
 
 Sentinel provides an Endpoint internally with a corresponding endpoint id of `sentinel`.
@@ -441,11 +453,14 @@ The following table shows all the configurations of Spring Cloud Alibaba Sentine
 |`spring.cloud.sentinel.zuul.order.pre`| The order of SentinelZuulPreFilter | 10000
 |`spring.cloud.sentinel.zuul.order.post`| The order of SentinelZuulPostFilter | 1000
 |`spring.cloud.sentinel.zuul.order.error`| The order of SentinelZuulErrorFilter | -1
+<<<<<<< HEAD
 |`spring.cloud.sentinel.scg.fallback.mode`| Response mode after Spring Cloud Gateway circuit break (select `redirect` or `response`) |
 |`spring.cloud.sentinel.scg.fallback.redirect`| Spring Cloud Gateway response mode is the redirect URL corresponding to 'redirect' mode |
 |`spring.cloud.sentinel.scg.fallback.response-body`| Spring Cloud Gateway response mode is response content corresponding to 'response' mode |
 |`spring.cloud.sentinel.scg.fallback.response-status`| Spring Cloud Gateway response mode is the response code corresponding to 'response' mode | 429
 |`spring.cloud.sentinel.scg.fallback.content-type`| The Spring Cloud Gateway response mode is the content-type corresponding to the 'response' mode. | application/json
+=======
+>>>>>>> 1.x
 |===
 
 

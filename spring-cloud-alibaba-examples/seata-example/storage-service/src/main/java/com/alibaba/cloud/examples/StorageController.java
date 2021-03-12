@@ -1,11 +1,19 @@
 /*
+<<<<<<< HEAD
  * Copyright 2013-2018 the original author or authors.
+=======
+ * Copyright (C) 2019 the original author or authors.
+>>>>>>> 1.x
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
+<<<<<<< HEAD
  *      https://www.apache.org/licenses/LICENSE-2.0
+=======
+ *      http://www.apache.org/licenses/LICENSE-2.0
+>>>>>>> 1.x
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,8 +29,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+=======
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+>>>>>>> 1.x
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -34,7 +48,10 @@ public class StorageController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(StorageController.class);
 
 	private static final String SUCCESS = "SUCCESS";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 	private static final String FAIL = "FAIL";
 
 	private final JdbcTemplate jdbcTemplate;
@@ -43,7 +60,11 @@ public class StorageController {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
+<<<<<<< HEAD
 	@GetMapping(value = "/storage/{commodityCode}/{count}", produces = "application/json")
+=======
+	@RequestMapping(value = "/storage/{commodityCode}/{count}", method = RequestMethod.GET, produces = "application/json")
+>>>>>>> 1.x
 	public String echo(@PathVariable String commodityCode, @PathVariable int count) {
 		LOGGER.info("Storage Service Begin ... xid: " + RootContext.getXID());
 		int result = jdbcTemplate.update(
@@ -55,5 +76,8 @@ public class StorageController {
 		}
 		return FAIL;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1.x
 }
